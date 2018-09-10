@@ -1,1 +1,4 @@
-include ':app', ':basecomponents'
+include ':app', ':basecomponents', ':aaa', ':BW_Libs'
+
+project(':basecomponents').projectDir = new File( 'components/basecomponents' )
+project(':aaa').projectDir = new File( 'components/aaa' )

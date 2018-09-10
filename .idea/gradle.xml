@@ -8,8 +8,10 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/BW_Libs" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/basecomponents" />
+            <option value="$PROJECT_DIR$/components/aaa" />
+            <option value="$PROJECT_DIR$/components/basecomponents" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
