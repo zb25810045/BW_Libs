@@ -9,3 +9,8 @@
 
 * toast 工具
   详细看：[toast 工具 - 取消连续显示](https://www.jianshu.com/p/10a8599a3bed)
+
+
+* spannableString 工具
+   详细看：[textview - SpannableString 小工具](https://www.jianshu.com/p/401d3d071849)
+
