@@ -14,28 +14,28 @@ class DisplayUtils {
         /**
          * px 转 dp
          */
-        fun px2dp(context: Context, pxValue: Float): Int {
+        fun px2dp(context: Context, pxValue: Int): Int {
             return (pxValue / context.getResources().getDisplayMetrics().density + 0.5f).toInt()
         }
 
         /**
          * px 转 sp
          */
-        fun px2sp(context: Context, pxValue: Float): Int {
+        fun px2sp(context: Context, pxValue: Int): Int {
             return (pxValue / context.getResources().getDisplayMetrics().density + 0.5f).toInt()
         }
 
         /**
          * dp 转 px
          */
-        fun dp2px(context: Context, dipValue: Float): Int {
+        fun dp2px(context: Context, dipValue: Int): Int {
             return (context.getResources().getDisplayMetrics().density * dipValue + 0.5f).toInt()
         }
 
         /**
          * sp 转 px
          */
-        fun sp2px(context: Context, spValue: Float): Int {
+        fun sp2px(context: Context, spValue: Int): Int {
             return (context.getResources().getDisplayMetrics().density * spValue + 0.5f).toInt()
         }
     }
