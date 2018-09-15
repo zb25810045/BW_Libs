@@ -1,4 +1,4 @@
-package com.bloodcrown.baselibs
+package com.bloodcrown.baselibs.unit
 
 import android.content.Context
 
@@ -7,7 +7,7 @@ import android.content.Context
  * 时间 ： 2018/9/10 下午8:51
  * 描述 ：
  */
-class DisplayUtils {
+class UnitUtils {
 
     companion object {
 

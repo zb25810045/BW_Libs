@@ -1,4 +1,4 @@
-package com.bloodcrown.baselibs
+package com.bloodcrown.baselibs.spannbale
 
 import android.graphics.Typeface
 import android.graphics.drawable.Drawable

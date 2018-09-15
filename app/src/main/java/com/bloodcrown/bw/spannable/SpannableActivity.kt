@@ -7,8 +7,8 @@ import android.text.TextPaint
 import android.text.style.ClickableSpan
 import android.view.View
 import com.bloodcrown.basecomponents.toast.ToastComponent
-import com.bloodcrown.baselibs.DisplayUtils
-import com.bloodcrown.baselibs.SpanUtils
+import com.bloodcrown.baselibs.unit.UnitUtils
+import com.bloodcrown.baselibs.spannbale.SpanUtils
 import com.bloodcrown.bw.R
 import kotlinx.android.synthetic.main.activity_spannable.*
 
@@ -43,7 +43,7 @@ class SpannableActivity : AppCompatActivity() {
         // 绝对文字大小
         SpanUtils
                 .with(tx031)
-                .absoluteTextSize(DisplayUtils.sp2px(this@SpannableActivity, 26), tx031.text.indexOf("-") + 1, tx031.text.length)
+                .absoluteTextSize(UnitUtils.sp2px(this@SpannableActivity, 26), tx031.text.indexOf("-") + 1, tx031.text.length)
                 .show()
 
 
