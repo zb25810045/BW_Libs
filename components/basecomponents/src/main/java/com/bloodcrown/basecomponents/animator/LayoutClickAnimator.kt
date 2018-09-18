@@ -17,13 +17,19 @@ import com.bloodcrown.basecomponents.utils.FastClickUtils
  */
 class LayoutClickAnimator(var view: View, var time: Long = 300) {
 
+    // view 大小缩放的量，注意不是最终值
+    var scaleOffset: Float = 0.05f
+
+    // view 初始的 Z 轴高度值
+    var transitionZ: Float = 0f
+    // view 按下时 Z 轴最终值
+    var transitionZEnd: Float = 0f
+
+    // 按下动画和回弹动画的进行时标记
     var isDowning: Boolean = false
     var isUping: Boolean = false
 
-    var transitionZ: Float = 0f
-    var scaleOffset: Float = 0.05f
-    var transitionZEnd: Float = 0f
-
+    // 连点判断工具
     var fastClickUtils = FastClickUtils(time)
 
     /**
