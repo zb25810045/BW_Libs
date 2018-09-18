@@ -6,16 +6,49 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     tools:context="com.bloodcrown.bw.textview.TextViewActivity">
 
+    <!--翻转效果-->
     <TextView
         android:id="@+id/btn01"
         android:layout_width="100dp"
         android:layout_height="30dp"
-        android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="翻转效果"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/view_02"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+
+    <!--缩放点击效果-->
+    <LinearLayout
+        android:id="@+id/view_02"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:translationZ="10px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn01">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:text="缩放点击效果"/>
+
+        <ImageView
+            android:layout_width="260dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_dog"/>
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>

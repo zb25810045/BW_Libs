@@ -12,6 +12,7 @@ import android.widget.Toast
 class ToastComponent {
 
     lateinit var toast: Toast
+    lateinit var application: Application
 
     companion object {
 
@@ -26,13 +27,15 @@ class ToastComponent {
                 Log.d(TAG, "初始化失败，application = null")
                 return
             }
+            instance.application = application
             instance.toast = Toast.makeText(application, DEFAULT_MESSAGE, TIME_SHORT)
         }
     }
 
-
     fun show(info: String?, time: Int = TIME_SHORT) {
-
+        if (toast == null) {
+            toast = Toast.makeText(application, DEFAULT_MESSAGE, TIME_SHORT)
+        }
         toast?.setText(info)
         toast?.duration = time
         toast?.show()

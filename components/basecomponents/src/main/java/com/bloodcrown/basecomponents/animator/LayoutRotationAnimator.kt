@@ -1,4 +1,4 @@
-package com.bloodcrown.baselibs.animator
+package com.bloodcrown.basecomponents.animator
 
 import android.animation.Animator
 import android.animation.ObjectAnimator
