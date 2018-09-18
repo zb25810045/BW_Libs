@@ -13,4 +13,7 @@
 
 * spannableString 工具
    详细看：[textview - SpannableString 小工具](https://www.jianshu.com/p/401d3d071849)
+* layout 动画效果，适用任何 view
+   * [textview - 翻转动画](https://www.jianshu.com/p/36c0cdf6097a)
+   * [textview - 点击阴影缩放动画](https://www.jianshu.com/p/6e9785aedc4c)
 

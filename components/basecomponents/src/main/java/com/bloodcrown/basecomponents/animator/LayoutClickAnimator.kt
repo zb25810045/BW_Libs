@@ -88,7 +88,7 @@ class LayoutClickAnimator(var view: View, var time: Long = 300) {
 
         var animatorSet = AnimatorSet()
         animatorSet.setDuration(time)
-        animatorSet.interpolator = OvershootInterpolator(3f)
+        animatorSet.interpolator =  OvershootInterpolator(3f)
 
         val animatorX = ObjectAnimator.ofFloat(view, "scaleX", 1f, (1 - scaleOffset))
         val animatorY = ObjectAnimator.ofFloat(view, "scaleY", 1f, (1 - scaleOffset))
