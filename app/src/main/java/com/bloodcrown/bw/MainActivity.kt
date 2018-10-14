@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.bloodcrown.basecomponents.toast.ToastComponent
+import com.bloodcrown.bw.customeview.CustomeViewActivity
 import com.bloodcrown.bw.spannable.SpannableActivity
 import com.bloodcrown.bw.textview.TextViewActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -34,12 +35,20 @@ class MainActivity : AppCompatActivity() {
             this@MainActivity.startActivity(intent)
         })
 
-        // spannableString 工具
+        // textview 效果
         btn_textview.setOnClickListener({
 
             var intent: Intent = Intent(this@MainActivity, TextViewActivity::class.java)
             this@MainActivity.startActivity(intent)
         })
+
+        btn_customeview.setOnClickListener( {
+
+            var intent: Intent = Intent(this@MainActivity, CustomeViewActivity::class.java)
+            this@MainActivity.startActivity(intent)
+        } )
+
+
 
 
     }

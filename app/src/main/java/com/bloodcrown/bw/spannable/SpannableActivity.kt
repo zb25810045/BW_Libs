@@ -7,7 +7,7 @@ import android.text.TextPaint
 import android.text.style.ClickableSpan
 import android.view.View
 import com.bloodcrown.basecomponents.toast.ToastComponent
-import com.bloodcrown.baselibs.unit.UnitUtils
+import com.bloodcrown.basecomponents.utils.UnitUtils
 import com.bloodcrown.baselibs.spannbale.SpanUtils
 import com.bloodcrown.bw.R
 import kotlinx.android.synthetic.main.activity_spannable.*

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <declare-styleable name="CustomeTextView">
+        <attr name="android:textSize" tools:ignore="ResourceName"></attr>
+        <attr name="android:text" tools:ignore="ResourceName"></attr>
+    </declare-styleable>
+
+</resources>
