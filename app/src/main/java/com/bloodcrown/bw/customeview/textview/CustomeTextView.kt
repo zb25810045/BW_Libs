@@ -1,4 +1,4 @@
-package com.bloodcrown.bw.customeview
+package com.bloodcrown.bw.customeview.textview
 
 import android.content.Context
 import android.graphics.Canvas

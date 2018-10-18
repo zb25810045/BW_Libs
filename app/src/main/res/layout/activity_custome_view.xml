@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.bloodcrown.bw.customeview.CustomeViewActivity">
+    tools:context="com.bloodcrown.bw.customeview.textview.CustomeViewActivity">
 
     <Button
         android:id="@+id/btn_textview"
@@ -17,9 +17,15 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-
-
-
+    <Button
+        android:id="@+id/btn_flexlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="自己实现一个 FlexLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_textview"/>
 
 
 </android.support.constraint.ConstraintLayout>

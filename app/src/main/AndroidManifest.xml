@@ -21,9 +21,11 @@
         </activity>
         <activity android:name=".textview.TextViewActivity">
         </activity>
-        <activity android:name=".customeview.CustomeViewActivity">
+        <activity android:name=".customeview.textview.CustomeViewActivity">
         </activity>
-        <activity android:name=".customeview.CustomeTextviewActivity">
+        <activity android:name=".customeview.textview.CustomeTextviewActivity">
+        </activity>
+        <activity android:name=".customeview.FlexLayoutActivity">
         </activity>
     </application>
 

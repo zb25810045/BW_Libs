@@ -1,9 +1,10 @@
-package com.bloodcrown.bw.customeview
+package com.bloodcrown.bw.customeview.textview
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import com.bloodcrown.bw.R
+import com.bloodcrown.bw.customeview.FlexLayoutActivity
 import kotlinx.android.synthetic.main.activity_custome_view.*
 
 class CustomeViewActivity : AppCompatActivity() {
@@ -12,11 +13,17 @@ class CustomeViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_custome_view)
 
-        btn_textview.setOnClickListener( {
+        btn_textview.setOnClickListener({
 
             var intent: Intent = Intent(this@CustomeViewActivity, CustomeTextviewActivity::class.java)
             this@CustomeViewActivity.startActivity(intent)
-        } )
+        })
+
+        btn_flexlayout.setOnClickListener({
+
+            var intent: Intent = Intent(this@CustomeViewActivity, FlexLayoutActivity::class.java)
+            this@CustomeViewActivity.startActivity(intent)
+        })
 
 
     }

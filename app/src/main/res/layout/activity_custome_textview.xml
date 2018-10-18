@@ -4,9 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    tools:context="com.bloodcrown.bw.customeview.CustomeTextviewActivity">
+    tools:context="com.bloodcrown.bw.customeview.textview.CustomeTextviewActivity">
 
-    <com.bloodcrown.bw.customeview.CustomeTextView
+    <com.bloodcrown.bw.customeview.textview.CustomeTextView
         android:layout_width="800px"
         android:layout_height="wrap_content"
         android:text="A1111111111111111B2222222222222222C333333333333333D444444444444444E55555555555555555F66666666666666"
