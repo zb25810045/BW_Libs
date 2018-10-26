@@ -28,4 +28,14 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_textview"/>
 
 
+    <Button
+        android:id="@+id/btn_ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="自定义一个 ratingBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_flexlayout"/>
+
 </android.support.constraint.ConstraintLayout>

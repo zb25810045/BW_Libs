@@ -25,7 +25,9 @@
         </activity>
         <activity android:name=".customeview.textview.CustomeTextviewActivity">
         </activity>
-        <activity android:name=".customeview.FlexLayoutActivity">
+        <activity android:name=".customeview.flexbox.FlexLayoutActivity">
+        </activity>
+        <activity android:name=".ratingbar.RatingBarActivity">
         </activity>
     </application>
 

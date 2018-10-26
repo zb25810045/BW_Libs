@@ -34,6 +34,13 @@ class UnitUtils {
         }
 
         /**
+         * dp 转 px
+         */
+        fun dp2px(context: Context, dipValue: Float): Int {
+            return (context.getResources().getDisplayMetrics().density * dipValue).toInt()
+        }
+
+        /**
          * px 转 dp
          */
         fun px2dp(context: Context, pxValue: Int): Int {

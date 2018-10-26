@@ -4,7 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.bloodcrown.bw.R
-import com.bloodcrown.bw.customeview.FlexLayoutActivity
+import com.bloodcrown.bw.customeview.flexbox.FlexLayoutActivity
+import com.bloodcrown.bw.ratingbar.RatingBarActivity
 import kotlinx.android.synthetic.main.activity_custome_view.*
 
 class CustomeViewActivity : AppCompatActivity() {
@@ -22,6 +23,12 @@ class CustomeViewActivity : AppCompatActivity() {
         btn_flexlayout.setOnClickListener({
 
             var intent: Intent = Intent(this@CustomeViewActivity, FlexLayoutActivity::class.java)
+            this@CustomeViewActivity.startActivity(intent)
+        })
+
+        btn_ratingBar.setOnClickListener({
+
+            var intent: Intent = Intent(this@CustomeViewActivity, RatingBarActivity::class.java)
             this@CustomeViewActivity.startActivity(intent)
         })
 

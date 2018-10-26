@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
+import android.graphics.Path
 import android.text.TextPaint
 import android.util.AttributeSet
 import android.view.View
@@ -51,7 +52,6 @@ class CustomeTextView : View {
      * 初始化各种自定义参数
      */
     private fun initAttrs(context: Context, attributeSet: AttributeSet?, defAttrStyle: Int) {
-
         val typedArray = context.obtainStyledAttributes(attributeSet, R.styleable.CustomeTextView)
         (0..typedArray.indexCount)
                 .asSequence()

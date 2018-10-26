@@ -4,9 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    tools:context="com.bloodcrown.bw.customeview.FlexLayoutActivity">
+    tools:context="com.bloodcrown.bw.customeview.flexbox.FlexLayoutActivity">
 
-    <com.bloodcrown.bw.customeview.CustomeFlexLayout
+    <com.bloodcrown.bw.customeview.flexbox.CustomeFlexLayout
         android:id="@+id/view_flex"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
