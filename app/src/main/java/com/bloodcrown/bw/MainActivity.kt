@@ -9,6 +9,7 @@ import com.bloodcrown.bw.customeview.textview.CustomeViewActivity
 import com.bloodcrown.bw.spannable.SpannableActivity
 import com.bloodcrown.bw.textview.TextViewActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import java.math.RoundingMode
 
 class MainActivity : AppCompatActivity() {
 
@@ -43,14 +44,11 @@ class MainActivity : AppCompatActivity() {
         })
 
         // 自定义 view 练手
-        btn_customeview.setOnClickListener( {
+        btn_customeview.setOnClickListener({
 
             var intent: Intent = Intent(this@MainActivity, CustomeViewActivity::class.java)
             this@MainActivity.startActivity(intent)
-        } )
-
-
-
+        })
 
     }
 }

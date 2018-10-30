@@ -29,6 +29,8 @@
         </activity>
         <activity android:name=".ratingbar.RatingBarActivity">
         </activity>
+        <activity android:name=".pieview.PieViewActivity">
+        </activity>
     </application>
 
 </manifest>

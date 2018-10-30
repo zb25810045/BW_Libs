@@ -3,6 +3,7 @@ package com.bloodcrown.bw.customeview.textview
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.bloodcrown.bw.pieview.PieViewActivity
 import com.bloodcrown.bw.R
 import com.bloodcrown.bw.customeview.flexbox.FlexLayoutActivity
 import com.bloodcrown.bw.ratingbar.RatingBarActivity
@@ -29,6 +30,12 @@ class CustomeViewActivity : AppCompatActivity() {
         btn_ratingBar.setOnClickListener({
 
             var intent: Intent = Intent(this@CustomeViewActivity, RatingBarActivity::class.java)
+            this@CustomeViewActivity.startActivity(intent)
+        })
+
+        btn_view4.setOnClickListener({
+
+            var intent: Intent = Intent(this@CustomeViewActivity, PieViewActivity::class.java)
             this@CustomeViewActivity.startActivity(intent)
         })
 
