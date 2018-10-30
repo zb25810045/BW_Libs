@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
+    android:background="@color/colorPrimary"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".customeview.pieview.PieViewActivity">
+    tools:context="com.bloodcrown.bw.customeview.taiji.TaijiActivity">
 
-    <com.bloodcrown.bw.customeview.pieview.PieView
-        android:id="@+id/view_pieview"
+    <com.bloodcrown.bw.customeview.taiji.TaijiView
+        android:id="@+id/view_taiji"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    tools:context="com.bloodcrown.bw.ratingbar.RatingBarActivity">
+    tools:context=".customeview.ratingbar.RatingBarActivity">
 
     <com.bloodcrown.basecomponents.view.ratingbar.MyRatingBar
         android:id="@+id/view_ratingbar"

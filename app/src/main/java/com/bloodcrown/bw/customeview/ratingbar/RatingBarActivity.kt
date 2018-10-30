@@ -1,4 +1,4 @@
-package com.bloodcrown.bw.ratingbar
+package com.bloodcrown.bw.customeview.ratingbar
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity

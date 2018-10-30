@@ -21,15 +21,17 @@
         </activity>
         <activity android:name=".textview.TextViewActivity">
         </activity>
-        <activity android:name=".customeview.textview.CustomeViewActivity">
+        <activity android:name=".customeview.CustomeViewActivity">
         </activity>
         <activity android:name=".customeview.textview.CustomeTextviewActivity">
         </activity>
         <activity android:name=".customeview.flexbox.FlexLayoutActivity">
         </activity>
-        <activity android:name=".ratingbar.RatingBarActivity">
+        <activity android:name=".customeview.ratingbar.RatingBarActivity">
         </activity>
-        <activity android:name=".pieview.PieViewActivity">
+        <activity android:name=".customeview.pieview.PieViewActivity">
+        </activity>
+        <activity android:name=".customeview.taiji.TaijiActivity">
         </activity>
     </application>
 

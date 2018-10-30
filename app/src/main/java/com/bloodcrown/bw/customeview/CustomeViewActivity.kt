@@ -1,12 +1,14 @@
-package com.bloodcrown.bw.customeview.textview
+package com.bloodcrown.bw.customeview
 
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.bloodcrown.bw.pieview.PieViewActivity
+import com.bloodcrown.bw.customeview.pieview.PieViewActivity
 import com.bloodcrown.bw.R
 import com.bloodcrown.bw.customeview.flexbox.FlexLayoutActivity
-import com.bloodcrown.bw.ratingbar.RatingBarActivity
+import com.bloodcrown.bw.customeview.ratingbar.RatingBarActivity
+import com.bloodcrown.bw.customeview.taiji.TaijiActivity
+import com.bloodcrown.bw.customeview.textview.CustomeTextviewActivity
 import kotlinx.android.synthetic.main.activity_custome_view.*
 
 class CustomeViewActivity : AppCompatActivity() {
@@ -36,6 +38,12 @@ class CustomeViewActivity : AppCompatActivity() {
         btn_view4.setOnClickListener({
 
             var intent: Intent = Intent(this@CustomeViewActivity, PieViewActivity::class.java)
+            this@CustomeViewActivity.startActivity(intent)
+        })
+
+        btn_taiji.setOnClickListener({
+
+            var intent: Intent = Intent(this@CustomeViewActivity, TaijiActivity::class.java)
             this@CustomeViewActivity.startActivity(intent)
         })
 

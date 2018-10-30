@@ -5,11 +5,10 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.bloodcrown.basecomponents.toast.ToastComponent
-import com.bloodcrown.bw.customeview.textview.CustomeViewActivity
+import com.bloodcrown.bw.customeview.CustomeViewActivity
 import com.bloodcrown.bw.spannable.SpannableActivity
 import com.bloodcrown.bw.textview.TextViewActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import java.math.RoundingMode
 
 class MainActivity : AppCompatActivity() {
 
