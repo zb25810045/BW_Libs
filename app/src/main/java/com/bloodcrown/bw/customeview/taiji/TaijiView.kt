@@ -28,6 +28,7 @@ class TaijiView : View {
         initPaint()
     }
 
+
     /**
      * 初始化画笔
      */

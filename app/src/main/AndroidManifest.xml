@@ -33,6 +33,10 @@
         </activity>
         <activity android:name=".customeview.taiji.TaijiActivity">
         </activity>
+        <activity android:name=".list.RecyclerViewActivity">
+        </activity>
+        <activity android:name=".list.standar.StandardActivity">
+        </activity>
     </application>
 
 </manifest>

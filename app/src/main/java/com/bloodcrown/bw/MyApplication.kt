@@ -15,5 +15,7 @@ class MyApplication : Application() {
 
         // 初始化 toast 组件
         ToastComponent.init(this)
+//        StallBuster.getInstance().init(this)
+
     }
 }

@@ -29,8 +29,9 @@ class TaijiActivity : AppCompatActivity() {
         })
     }
 
-    override fun onDetachedFromWindow() {
-        super.onDetachedFromWindow()
-        handle.removeCallbacks { }
+    override fun onDestroy() {
+        super.onDestroy()
+        handle.removeMessages(0)
     }
+
 }

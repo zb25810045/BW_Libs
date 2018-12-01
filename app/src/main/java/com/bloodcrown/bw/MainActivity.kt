@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.bloodcrown.basecomponents.toast.ToastComponent
 import com.bloodcrown.bw.customeview.CustomeViewActivity
+import com.bloodcrown.bw.list.RecyclerViewActivity
 import com.bloodcrown.bw.spannable.SpannableActivity
 import com.bloodcrown.bw.textview.TextViewActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -25,8 +26,8 @@ class MainActivity : AppCompatActivity() {
             num++
             Log.d("AA", "num = " + num + ",message = " + toastMessage)
             ToastComponent.instance.show(toastMessage)
-        })
 
+        })
 
         // spannableString 工具
         btn_spannable.setOnClickListener({
@@ -48,6 +49,14 @@ class MainActivity : AppCompatActivity() {
             var intent: Intent = Intent(this@MainActivity, CustomeViewActivity::class.java)
             this@MainActivity.startActivity(intent)
         })
+
+        // recyclerview 练手
+        btn_recyclerview.setOnClickListener({
+
+            var intent: Intent = Intent(this@MainActivity, RecyclerViewActivity::class.java)
+            this@MainActivity.startActivity(intent)
+        })
+
 
     }
 }
