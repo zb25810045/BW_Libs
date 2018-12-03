@@ -37,6 +37,8 @@
         </activity>
         <activity android:name=".list.standar.StandardActivity">
         </activity>
+        <activity android:name=".list.difftils.DiffUtilsActivity">
+        </activity>
     </application>
 
 </manifest>

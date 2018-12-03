@@ -5,15 +5,15 @@
 
     <data>
         <import type="com.bloodcrown.bw.list.Cat"/>
-        <import type="com.bloodcrown.bw.list.standar.StandarPersenter"/>
+        <import type="com.bloodcrown.bw.list.difftils.DiffPersenter"/>
         <variable name="cat" type="com.bloodcrown.bw.list.Cat"></variable>
-        <variable name="persenter" type="StandarPersenter"></variable>
+        <variable name="persenter" type="DiffPersenter"></variable>
     </data>
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@color/colorPrimary"
+        android:layout_height="30dp"
+        android:background="@android:color/darker_gray"
         android:onClick="@{(view)->persenter.miaoMiaoJiao(cat.name)}">
 
         <TextView
@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="@{cat.name}"
-            android:textSize="22sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:text="@{String.valueOf(cat.price)}"
-            android:textSize="22sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>

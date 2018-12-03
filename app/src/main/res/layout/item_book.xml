@@ -4,9 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-        <import type="com.bloodcrown.bw.list.standar.Book"/>
+        <import type="com.bloodcrown.bw.list.Book"/>
         <import type="com.bloodcrown.bw.list.standar.StandarPersenter"/>
-        <variable name="book" type="Book"></variable>
+        <variable name="book" type="com.bloodcrown.bw.list.Book"></variable>
         <variable name="persenter" type="StandarPersenter"></variable>
     </data>
 

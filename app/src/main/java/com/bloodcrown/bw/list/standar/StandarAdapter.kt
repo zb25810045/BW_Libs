@@ -1,9 +1,13 @@
 package com.bloodcrown.bw.list.standar
 
+import android.support.v7.util.DiffUtil
 import com.bloodcrown.basecomponents.view.list.BaseAdapter
 import com.bloodcrown.basecomponents.view.list.BaseViewHolder
 import com.bloodcrown.bw.BR
 import com.bloodcrown.bw.R
+import com.bloodcrown.bw.list.Book
+import com.bloodcrown.bw.list.Cat
+import com.bloodcrown.bw.list.difftils.DiffPersenter
 
 /**
  * 作者 ： BloodCrown
@@ -35,4 +39,19 @@ class StandarAdapter : BaseAdapter() {
             holder?.dataBinding?.executePendingBindings()
         }
     }
+
+    override fun getDiffCllBack(oldData: MutableList<Any>, newData: MutableList<Any>): DiffUtil.Callback {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    fun addData(newData: Any) {
+        data.add(1, newData)
+        notifyItemInserted(1)
+    }
+
+    fun removeData() {
+        data.removeAt(2)
+        notifyItemRemoved(2)
+    }
+
 }

@@ -7,33 +7,43 @@
     android:layout_height="match_parent">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recy_standar"
+        android:id="@+id/recy_diff"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
     <Button
-        android:id="@+id/btn_add"
+        android:id="@+id/btn_diff1"
         android:layout_width="0dp"
         android:layout_height="38dp"
         android:layout_marginBottom="10dp"
         android:gravity="center"
-        android:text="添加一条数据"
+        android:text="移动位置"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/btn_remove"/>
+        app:layout_constraintRight_toLeftOf="@id/btn_diff2"/>
 
     <Button
-        android:id="@+id/btn_remove"
+        android:id="@+id/btn_diff2"
         android:layout_width="0dp"
         android:layout_height="38dp"
         android:layout_marginBottom="10dp"
         android:gravity="center"
-        android:text="删除一条数据"
+        android:text="更改内容"
+        app:layout_constraintRight_toLeftOf="@id/btn_diff3"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintLeft_toRightOf="@id/btn_add"
-        app:layout_constraintRight_toRightOf="parent"/>
+        app:layout_constraintLeft_toRightOf="@id/btn_diff1"/>
+
+    <Button
+    android:id="@+id/btn_diff3"
+    android:layout_width="0dp"
+    android:layout_height="38dp"
+    android:layout_marginBottom="10dp"
+    android:gravity="center"
+    android:text="复杂处理"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toRightOf="@id/btn_diff2"
+    app:layout_constraintRight_toRightOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>
 
