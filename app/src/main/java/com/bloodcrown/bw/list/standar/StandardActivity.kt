@@ -1,10 +1,13 @@
 package com.bloodcrown.bw.list.standar
 
+import android.databinding.DataBindingUtil
+import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.view.animation.AnimationUtils
 import com.bloodcrown.basecomponents.view.list.BWItemAnimator
+import com.bloodcrown.basecomponents.view.list.BWLinerItemDecoration
 import com.bloodcrown.bw.R
 import com.bloodcrown.bw.list.Book
 import com.bloodcrown.bw.list.Cat
@@ -17,6 +20,7 @@ class StandardActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_base)
 
         var layoutManage = LinearLayoutManager(this)
@@ -34,6 +38,8 @@ class StandardActivity : AppCompatActivity() {
         recy_standar.itemAnimator = itemAnimator
         recy_standar.adapter = adapter
 
+        recy_standar.addItemDecoration(BWLinerItemDecoration(20.toFloat(), Color.GRAY))
+
         btn_add.setOnClickListener({
             adapter.addData(Book("我是大大大大大大大", 155))
         })
@@ -46,6 +52,7 @@ class StandardActivity : AppCompatActivity() {
             val animation = AnimationUtils.loadLayoutAnimation(this@StandardActivity, R.anim.la_list_layout)
             recy_standar.setLayoutAnimation(animation)
         }
+
     }
 
     fun getData(): MutableList<Any> {

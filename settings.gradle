@@ -1,4 +1,4 @@
-include ':app', ':basecomponents', ':aaa', ':BW_Libs'
+include ':app', ':basecomponents', ':baselib', ':common_repositroy'
 
 project(':basecomponents').projectDir = new File( 'components/basecomponents' )
-project(':aaa').projectDir = new File( 'components/aaa' )
+project(':common_repositroy').projectDir = new File( 'components/common_repositroy' )

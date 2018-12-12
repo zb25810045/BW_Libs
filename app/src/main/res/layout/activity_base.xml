@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<android.support.constraint.ConstraintLayout
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recy_standar"
+    <android.support.constraint.ConstraintLayout
+
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_add"
-        android:layout_width="0dp"
-        android:layout_height="38dp"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:text="添加一条数据"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/btn_remove"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recy_standar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
-    <Button
-        android:id="@+id/btn_remove"
-        android:layout_width="0dp"
-        android:layout_height="38dp"
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:text="删除一条数据"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintLeft_toRightOf="@id/btn_add"
-        app:layout_constraintRight_toRightOf="parent"/>
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="添加一条数据"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btn_remove"/>
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/btn_remove"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="删除一条数据"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/btn_add"
+            app:layout_constraintRight_toRightOf="parent"/>
 
+    </android.support.constraint.ConstraintLayout>
+</layout>

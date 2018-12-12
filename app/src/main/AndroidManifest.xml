@@ -2,6 +2,8 @@
 <manifest package="com.bloodcrown.bw"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -38,6 +40,11 @@
         <activity android:name=".list.standar.StandardActivity">
         </activity>
         <activity android:name=".list.difftils.DiffUtilsActivity">
+        </activity>
+        <activity
+            android:name=".net.NetActivity"
+            android:label="@string/title_activity_net"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
 

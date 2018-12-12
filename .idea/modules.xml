@@ -3,10 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BW_Libs.iml" filepath="$PROJECT_DIR$/BW_Libs.iml" />
-      <module fileurl="file://$PROJECT_DIR$/BW_Libs/BW_Libs-BW_Libs.iml" filepath="$PROJECT_DIR$/BW_Libs/BW_Libs-BW_Libs.iml" />
-      <module fileurl="file://$PROJECT_DIR$/components/aaa/aaa.iml" filepath="$PROJECT_DIR$/components/aaa/aaa.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/components/basecomponents/basecomponents.iml" filepath="$PROJECT_DIR$/components/basecomponents/basecomponents.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baselib/baselib.iml" filepath="$PROJECT_DIR$/baselib/baselib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/components/common_repositroy/common_repositroy.iml" filepath="$PROJECT_DIR$/components/common_repositroy/common_repositroy.iml" />
     </modules>
   </component>
 </project>

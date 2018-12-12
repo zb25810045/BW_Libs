@@ -14,7 +14,7 @@ import com.bloodcrown.bw.list.Cat
  * 时间 ： 2018/12/1 上午3:44
  * 描述 ：
  */
-class DiffAdapter : BaseAdapter() {
+class DiffAdapter : BaseAdapter<Any>() {
 
     lateinit var persenter: DiffPersenter
 

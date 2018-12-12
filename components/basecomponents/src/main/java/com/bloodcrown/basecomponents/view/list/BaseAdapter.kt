@@ -11,7 +11,7 @@ import android.view.ViewGroup
  * 时间 ： 2018/11/30 下午12:08
  * 描述 ：
  */
-abstract class BaseAdapter(var data: MutableList<Any> = mutableListOf()) : RecyclerView.Adapter<BaseViewHolder>() {
+abstract class BaseAdapter<T>(var data: MutableList<T> = mutableListOf()) : RecyclerView.Adapter<BaseViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): BaseViewHolder {
         return BaseViewHolder(DataBindingUtil.inflate(LayoutInflater.from(parent?.context), viewType, parent, false))
@@ -21,14 +21,14 @@ abstract class BaseAdapter(var data: MutableList<Any> = mutableListOf()) : Recyc
         return data.size
     }
 
-    abstract fun getDiffCllBack(oldData: MutableList<Any>, newData: MutableList<Any>): DiffUtil.Callback
+    abstract fun getDiffCllBack(oldData: MutableList<T>, newData: MutableList<T>): DiffUtil.Callback
 
-    fun setDataby(newData: MutableList<Any>) {
+    fun refreshData(newData: MutableList<T>) {
         this.data = newData
         this.notifyDataSetChanged()
     }
 
-    fun addItem(positon: Int, data: Any) {
+    fun addItem(positon: Int, data: T) {
         this.data.add(positon, data)
         notifyItemInserted(positon)
     }
@@ -38,7 +38,7 @@ abstract class BaseAdapter(var data: MutableList<Any> = mutableListOf()) : Recyc
         notifyItemRemoved(positon)
     }
 
-    fun setDatabyDiffUtils(newData: MutableList<Any>) {
+    fun refreshDatabyDiffUtils(newData: MutableList<T>) {
 
         var result: DiffUtil.DiffResult = DiffUtil.calculateDiff(getDiffCllBack(this.data, newData), true)
         this.data = newData

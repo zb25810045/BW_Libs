@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BW_Libs</string>
+    <string name="title_activity_aa">AAActivity</string>
+    <string name="title_activity_net">NetActivity</string>
 </resources>

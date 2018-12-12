@@ -1,5 +1,6 @@
 package com.bloodcrown.bw.list.standar
 
+import android.util.Log
 import com.bloodcrown.basecomponents.toast.ToastComponent
 
 /**
@@ -11,6 +12,10 @@ class StandarPersenter {
 
     fun miaoMiaoJiao(info: String) {
         ToastComponent.instance.show(info)
+    }
+
+    fun show(info: String, visibility: Int) {
+        Log.d("AA", "vis:" + info + ",isshow:" + visibility)
     }
 
 }

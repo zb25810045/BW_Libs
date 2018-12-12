@@ -16,7 +16,7 @@
         android:background="@color/colorAccent"
         android:onClick="@{(view)->persenter.miaoMiaoJiao(book.name)}">
 
-        <TextView
+        <com.bloodcrown.bw.list.standar.MyTextView
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -35,15 +35,15 @@ class DiffUtilsActivity : AppCompatActivity() {
         recy_diff.adapter = adapter
 
         btn_diff1.setOnClickListener({
-            adapter.setDatabyDiffUtils(getDataByDiff1())
+            adapter.refreshDatabyDiffUtils(getDataByDiff1())
         })
 
         btn_diff2.setOnClickListener({
-            adapter.setDatabyDiffUtils(getDataByDiff2())
+            adapter.refreshDatabyDiffUtils(getDataByDiff2())
         })
 
         btn_diff3.setOnClickListener({
-            adapter.setDatabyDiffUtils(getDataByDiff3())
+            adapter.refreshDatabyDiffUtils(getDataByDiff3())
         })
 
         window.decorView.post {

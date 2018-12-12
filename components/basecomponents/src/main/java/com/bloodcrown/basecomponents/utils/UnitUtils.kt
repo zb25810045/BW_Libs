@@ -5,6 +5,7 @@ import android.util.TypedValue
 
 /**
  * 作者 ： BloodCrown
+ *
  * 时间 ： 2018/9/10 下午8:51
  * 描述 ：
  *          TypedValue.applyDimension()方法的功能就是把非标准尺寸转换成标准尺寸, 如: 
