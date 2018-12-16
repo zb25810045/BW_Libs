@@ -1,60 +1,63 @@
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
+
+apply from: rootProject.file('common.gradle')
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.2"
 
     defaultConfig {
-        vectorDrawables.useSupportLibrary = true
-        applicationId "com.bloodcrown.bw"
-        minSdkVersion 19
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        applicationId rootProject.ext.android.applicationId
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
     }
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
+    signingConfigs {
 
-    dataBinding {
-        enabled = true
+        //release版的签名配置信息
+        release {
+            storeFile file(rootProject.ext.signConfigs.storeFile)
+            storePassword rootProject.ext.signConfigs.storePassword
+            keyAlias rootProject.ext.signConfigs.keyAlias
+            keyPassword rootProject.ext.signConfigs.keyPassword
+        }
     }
 
     buildTypes {
+
+        debug{
+
+            buildConfigField( 'String','baseUrl','"baseUrl_debug"' )
+
+        }
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            buildConfigField( 'String','baseUrl','"baseUrl_release"' )
         }
     }
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support:design:26.1.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.1'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
-    kapt "com.android.databinding:compiler:$rootProject.ext.gradle_version"
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+
     implementation project(':basecomponents')
-    implementation "com.android.support:appcompat-v7:$recyclerview_version"
-    implementation "com.android.support:recyclerview-v7:$recyclerview_version"
-    //    implementation 'com.github.zhangjianli:stallbuster:1.1'
     implementation project(':baselib')
-    // retrofit 依赖
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
-    implementation 'io.reactivex.rxjava2:rxjava:2.1.10'
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
     implementation project(':common_repositroy')
+
+    implementation rootProject.ext.dependence.design
+    implementation rootProject.ext.dependence.appcompatv7
+    implementation rootProject.ext.dependence.recyclerview
+    implementation rootProject.ext.dependence.constraintLayout
+
+    // retrofit 依赖
+    implementation rootProject.ext.dependence.rxandroid
+    implementation rootProject.ext.dependence.rxjava
+    implementation rootProject.ext.dependence.retrofit
+    implementation rootProject.ext.dependence.gson
+    implementation rootProject.ext.dependence.retrofitAdapter
+    implementation rootProject.ext.dependence.http3LoggingInterceptor
+    implementation rootProject.ext.dependence.okhttp3
+
+//    implementation 'com.github.zhangjianli:stallbuster:1.1'
+
 }

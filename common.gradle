@@ -1,0 +1,65 @@
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+//kapt {
+//    arguments {
+//        arg("moduleName", project.getName())
+//    }
+//}
+
+android {
+
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        vectorDrawables.useSupportLibrary = true
+
+//        multiDexEnabled true
+
+        ndk {
+            abiFilters 'armeabi', 'x86'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    testImplementation rootProject.ext.dependence.junit
+    androidTestImplementation rootProject.ext.dependence.runner
+    androidTestImplementation rootProject.ext.dependence.espresso
+    implementation rootProject.ext.dependence.multidex
+
+    implementation rootProject.ext.dependence.kotlinStdlibJdk8
+    implementation rootProject.ext.dependence.kotlinReflect
+    kapt rootProject.ext.dependence.databinding
+
+}
+repositories {
+    mavenCentral()
+}

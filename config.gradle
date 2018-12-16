@@ -1,0 +1,84 @@
+//第三方依赖库和版本号管理
+def versions = [:]
+
+versions.support = "26.1.0"
+versions.constraintLayout = "1.1.2"
+versions.kotlin = "1.2.71"
+versions.gradle = "3.0.1"
+
+versions.junit = "4.12"
+versions.runner = "1.0.1"
+versions.espresso = "3.0.1"
+versions.multidex = "1.0.3"
+
+versions.rxjava = "2.1.10"
+versions.rx_android = "2.0.2"
+versions.retrofit = "2.4.0"
+versions.okhttp3 = "3.4.1"
+versions.gson = "2.4.0"
+
+
+ext {
+
+    android = [
+            compileSdkVersion: 26,
+            buildToolsVersion: '26.0.2',
+            minSdkVersion    : 19,
+            targetSdkVersion : 26,
+            applicationId    : 'com.bloodcrown.bw',
+            versionCode      : 1,
+            versionName      : '1.0',
+            //            multiDexEnabled  : true
+    ]
+
+    kotlin = [
+            kotlin: "1.2.71"
+    ]
+
+    signConfigs = [
+            'storeFile'    : 'sign.jks',
+            'storePassword': '123456',
+            'keyAlias'     : 'sign',
+            'keyPassword'  : '123456'
+    ]
+
+    java = [
+            'javaVersion': JavaVersion.VERSION_1_8
+    ]
+
+    dependence = [
+
+            // 官方
+            'appcompatv7'            : "com.android.support:appcompat-v7:$versions.support",
+            'supportv4'              : "com.android.support:support-v4:$versions.support",
+            'design'                 : "com.android.support:design:$versions.support",
+            'recyclerview'           : "com.android.support:recyclerview-v7:$versions.support",
+            'constraintLayout'       : "com.android.support.constraint:constraint-layout:$versions.constraintLayout",
+
+            // module 基础配置
+            'junit'       : "junit:junit:$versions.junit",
+            'runner'       : "com.android.support.test:runner:$versions.runner",
+            'espresso'       : "com.android.support.test.espresso:espresso-core:$versions.espresso",
+            'multidex'       : "com.android.support:multidex:$versions.multidex",
+
+            // kotlin
+            'kotlinStdlibJdk8'       : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$versions.kotlin",
+            'kotlinReflect'          : "org.jetbrains.kotlin:kotlin-reflect:$versions.kotlin",
+            'databinding'            : "com.android.databinding:compiler:$versions.gradle",
+
+            // rxjava2
+            'rxjava'                 : "io.reactivex.rxjava2:rxjava:$versions.rxjava",
+            'rxandroid'              : "io.reactivex.rxjava2:rxandroid:$versions.rx_android",
+
+            // retrofit2
+            'retrofit'               : "com.squareup.retrofit2:retrofit:$versions.retrofit",
+            'gson'                   : "com.squareup.retrofit2:converter-gson:$versions.gson",
+            'retrofitAdapter'        : "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit",
+
+            // okhttp3
+            'okhttp3'                : "com.squareup.okhttp3:okhttp:$versions.okhttp3",
+            'http3LoggingInterceptor': "com.squareup.okhttp3:logging-interceptor:$versions.okhttp3",
+
+    ]
+
+}
