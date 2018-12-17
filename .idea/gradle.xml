@@ -10,8 +10,8 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/baselib" />
-            <option value="$PROJECT_DIR$/components/basecomponents" />
-            <option value="$PROJECT_DIR$/components/common_repositroy" />
+            <option value="$PROJECT_DIR$/components/baseComponents" />
+            <option value="$PROJECT_DIR$/components/commonRepositroy" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

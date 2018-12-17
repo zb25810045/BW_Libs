@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 
 apply from: rootProject.file('common.gradle')
+apply from: rootProject.file('releaseinfo.gradle')
 
 android {
 
@@ -24,25 +25,37 @@ android {
 
     buildTypes {
 
-        debug{
+        debug {
 
-            buildConfigField( 'String','baseUrl','"baseUrl_debug"' )
+            buildConfigField('String', 'baseUrl', '"baseUrl_debug"')
 
         }
         release {
 //            minifyEnabled false
 //            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
-            buildConfigField( 'String','baseUrl','"baseUrl_release"' )
+            buildConfigField('String', 'baseUrl', '"baseUrl_release"')
         }
     }
+
+    //自定义输出apk名字
+    applicationVariants.all {
+        variant ->
+            variant.outputs.all { output ->
+                outputFileName = new File("app_" +
+                        buildType.name +
+                        "_v" + defaultConfig.versionName + "_" +
+                        new Date().format("yyyy-MM-dd")+ ".apk")
+            }
+    }
+
 }
 
 dependencies {
 
-    implementation project(':basecomponents')
+    implementation project(':baseComponents')
     implementation project(':baselib')
-    implementation project(':common_repositroy')
+    implementation project(':commonRepositroy')
 
     implementation rootProject.ext.dependence.design
     implementation rootProject.ext.dependence.appcompatv7
