@@ -8,9 +8,12 @@ import com.bloodcrown.basecomponents.toast.ToastComponent
 import com.bloodcrown.bw.customeview.CustomeViewActivity
 import com.bloodcrown.bw.list.RecyclerViewActivity
 import com.bloodcrown.bw.net.NetActivity
+import com.bloodcrown.bw.screenauto.ScreenAutoActivity
 import com.bloodcrown.bw.spannable.SpannableActivity
 import com.bloodcrown.bw.textview.TextViewActivity
+import com.bloodcrown.bw.webview.WebViewActivity
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,6 +23,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
+
+//        StatusBarUtils.setStatusBarColorByKITKAT(window, this, Color.YELLOW)
+//        MeiZuStatusbarUtils.setStatusBarDarkIcon(window, true)
+
+//        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.M ){
+//            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+//        }
 
         // toast 组件测试
         btn_toast.setOnClickListener({
@@ -62,6 +72,20 @@ class MainActivity : AppCompatActivity() {
         btn_net.setOnClickListener({
 
             var intent: Intent = Intent(this@MainActivity, NetActivity::class.java)
+            this@MainActivity.startActivity(intent)
+        })
+
+        // 自定义 webview
+        btn_webview.setOnClickListener({
+
+            var intent: Intent = Intent(this@MainActivity, WebViewActivity::class.java)
+            this@MainActivity.startActivity(intent)
+        })
+
+        // 自定义 webview
+         btn_screen.setOnClickListener({
+
+            var intent: Intent = Intent(this@MainActivity, ScreenAutoActivity::class.java)
             this@MainActivity.startActivity(intent)
         })
 

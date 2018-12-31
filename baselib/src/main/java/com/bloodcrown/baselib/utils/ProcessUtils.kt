@@ -7,20 +7,40 @@ import android.content.Context
  * 描述 ： 进程工具
  *
  * 实现功能：
- * 1. 获取进程名称 -> getCurProcessName
+ * 1. 判断当前进程是不是主进程 -> isMainProcess
+ * 2. 获取进程名称 -> getProcessName
+ *
+ *
+ * 相关代码：
+ * 1. 获取当前进程 id
+ *  -> val pid = android.os.Process.myPid()
+ *
+ *
  */
 class ProcessUtils {
 
     companion object {
 
         /**
+         * 判断当前进程是不是主进程
+         */
+        fun isMainProcess(context: Context, mainProcessName: String, pid: Int): Boolean {
+            return mainProcessName?.equals(getProcessName(context, pid))
+        }
+
+        /**
          * 获取进程名字
          */
-        fun getCurProcessName(context: Context): String {
+        fun getProcessName(context: Context, pid: Int): String {
+
             var result: String = ""
-            val pid = android.os.Process.myPid()
-            val mActivityManager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
-            mActivityManager.runningAppProcesses.forEach {
+            val activityManager = context.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
+
+            if (activityManager == null) {
+                return ""
+            }
+
+            activityManager.runningAppProcesses.forEach {
                 it.pid = pid
                 return it.processName
             }
@@ -28,5 +48,4 @@ class ProcessUtils {
         }
 
     }
-
 }

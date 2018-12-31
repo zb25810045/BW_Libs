@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bloodcrown.bw.screenauto.WidthActivity">
+
+    <TextView
+        android:id="@+id/tx01"
+        android:layout_width="1000pt"
+        android:layout_height="300pt"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:text=" 1000pt/200pt "
+        tools:layout_height="300px"
+        tools:layout_width="1080px"/>
+
+    <TextView
+        android:id="@+id/tx02"
+        android:layout_width="500pt"
+        android:layout_height="300pt"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text=" 500pt/200pt "
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tx01"
+        tools:layout_height="300px"
+        tools:layout_width="500px"/>
+
+    <TextView
+        android:id="@+id/tx03"
+        android:layout_width="500pt"
+        android:layout_height="300pt"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:text=" 500pt/200pt "
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tx01"
+        tools:layout_height="300px"
+        tools:layout_width="500px"/>
+
+</android.support.constraint.ConstraintLayout>

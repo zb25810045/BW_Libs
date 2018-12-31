@@ -4,9 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BW_Libs.iml" filepath="$PROJECT_DIR$/BW_Libs.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/components/baseComponents/basecomponents.iml" filepath="$PROJECT_DIR$/components/baseComponents/basecomponents.iml" />
+      <module fileurl="file://$PROJECT_DIR$/components/baseComponents/baseComponents.iml" filepath="$PROJECT_DIR$/components/baseComponents/baseComponents.iml" />
       <module fileurl="file://$PROJECT_DIR$/baselib/baselib.iml" filepath="$PROJECT_DIR$/baselib/baselib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/components/commonRepositroy/common_repositroy.iml" filepath="$PROJECT_DIR$/components/commonRepositroy/common_repositroy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/components/commonRepositroy/commonRepositroy.iml" filepath="$PROJECT_DIR$/components/commonRepositroy/commonRepositroy.iml" />
     </modules>
   </component>
 </project>

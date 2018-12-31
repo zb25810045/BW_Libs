@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.bloodcrown.bw.screenauto.ScreenAutoActivity">
+
+    <Button
+        android:id="@+id/btn_width"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="以宽度为基准适配"/>
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/btn_width"
+        android:id="@+id/btn_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="以高度为基准适配"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,8 +1,13 @@
 package com.bloodcrown.bw
 
+import android.app.Activity
 import android.app.Application
+import android.os.Bundle
+import android.util.Log
+import android.util.TypedValue
 import com.bloodcrown.basecomponents.toast.ToastComponent
 import com.bloodcrown.baselib.net.HttpManager
+import com.bloodcrown.baselib.screen.ScreenAutoManager
 import okhttp3.*
 import org.json.JSONObject
 import java.util.concurrent.TimeUnit
@@ -24,6 +29,43 @@ class MyApplication : Application() {
 
         // 初始化网络配置
         initHttp()
+
+        ScreenAutoManager.instance.init(this, 1080.0f, ScreenAutoManager.BASE_LINE_WIDTH)
+
+        this.registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
+
+            override fun onActivityCreated(activity: Activity?, savedInstanceState: Bundle?) {
+                ScreenAutoManager.instance.onActivityCreated(activity)
+                Log.d("AA", "onActivityCreated")
+            }
+
+            override fun onActivityResumed(activity: Activity?) {
+                ScreenAutoManager.instance.onActivityResumed(activity)
+                Log.d("AA", "onActivityResumed")
+            }
+
+            override fun onActivityStarted(activity: Activity?) {
+                ScreenAutoManager.instance.onActivityStarted(activity)
+                Log.d("AA", "onActivityStarted")
+            }
+
+            override fun onActivityPaused(activity: Activity?) {
+                Log.d("AA", "AA")
+            }
+
+            override fun onActivityDestroyed(activity: Activity?) {
+                Log.d("AA", "onActivityDestroyed")
+            }
+
+            override fun onActivitySaveInstanceState(activity: Activity?, outState: Bundle?) {
+                Log.d("AA", "onActivitySaveInstanceState")
+            }
+
+            override fun onActivityStopped(activity: Activity?) {
+                Log.d("AA", "onActivityStopped")
+            }
+        })
+
     }
 
     fun initHttp() {
@@ -34,7 +76,7 @@ class MyApplication : Application() {
          * 请求头拦截器
          * 1. 可以判断网络地址是否需要特殊处理
          * if (s.contains("androidxx")) {
-        request = request.newBuilder().url("http://www.androidxx.cn").build();
+        request = request.newBuilder().mUrl("http://www.androidxx.cn").build();
         }
          */
         var headInterceptor = object : Interceptor {

@@ -20,4 +20,5 @@ dependencies {
 
     implementation rootProject.ext.dependence.appcompatv7
     implementation rootProject.ext.dependence.recyclerview
+    implementation rootProject.ext.dependence.constraintLayout
 }
