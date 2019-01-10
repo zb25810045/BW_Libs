@@ -54,7 +54,7 @@
         </activity>
         <activity
             android:name=".screenauto.WidthActivity"
-            android:configChanges="orientation|density|keyboardHidden|keyboard"/>
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard"/>
         <activity android:name=".screenauto.HeightActivity">
         </activity>
     </application>

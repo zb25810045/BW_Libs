@@ -73,6 +73,8 @@ class ScreenAutoManager {
 
         (context.getSystemService(WINDOW_SERVICE) as WindowManager).defaultDisplay.getSize(screenPoint)
 
+
+
         when (baseLine) {
 
             BASE_LINE_WIDTH -> {
@@ -89,6 +91,8 @@ class ScreenAutoManager {
                 }
             }
         }
+
+        resources.displayMetrics.densityDpi
     }
 
     fun getMetricsOnMiui(resources: Resources): DisplayMetrics? {
