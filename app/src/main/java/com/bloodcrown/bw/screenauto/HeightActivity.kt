@@ -3,6 +3,7 @@ package com.bloodcrown.bw.screenauto
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.WindowManager
 import com.bloodcrown.baselib.screen.ScreenAutoManager
 import com.bloodcrown.bw.R
@@ -24,6 +25,9 @@ class HeightActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_height)
 
         setContentView(R.layout.activity_height)
+
+        Log.d( "AA","AA1" )
+        Log.d( "AA","AA2" )
 
     }
 }
