@@ -1,6 +1,6 @@
 package com.bloodcrown.repositroy.book;
 
-import com.bloodcrown.baselib.net.HttpManager;
+import com.bloodcrown.baselib.net.HttpClient;
 import com.bloodcrown.baselib.net.exception.ApiException;
 import com.google.gson.Gson;
 
@@ -30,7 +30,7 @@ public class BookRepositroy {
         map.put("start", startCount);
         map.put("count", wantCount);
 
-        return HttpManager.Companion.getInstance().get(URL_BOOK_LIST, map)
+        return HttpClient.Companion.getInstance().get(URL_BOOK_LIST, map)
                 .map(new Function<ResponseBody, BookResponse>() {
                     @Override
                     public BookResponse apply(ResponseBody responseBody) throws Exception {

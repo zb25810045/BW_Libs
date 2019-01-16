@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.bloodcrown.basecomponents.toast.ToastComponent
+import com.bloodcrown.baselib.utils.NetworkUtils
 import com.bloodcrown.bw.customeview.CustomeViewActivity
 import com.bloodcrown.bw.list.RecyclerViewActivity
 import com.bloodcrown.bw.net.NetActivity
@@ -30,6 +31,7 @@ class MainActivity : AppCompatActivity() {
 //        if( Build.VERSION.SDK_INT >= Build.VERSION_CODES.M ){
 //            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
 //        }
+
 
         // toast 组件测试
         btn_toast.setOnClickListener({

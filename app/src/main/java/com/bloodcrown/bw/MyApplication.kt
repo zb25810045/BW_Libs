@@ -4,9 +4,8 @@ import android.app.Activity
 import android.app.Application
 import android.os.Bundle
 import android.util.Log
-import android.util.TypedValue
 import com.bloodcrown.basecomponents.toast.ToastComponent
-import com.bloodcrown.baselib.net.HttpManager
+import com.bloodcrown.baselib.net.HttpClient
 import com.bloodcrown.baselib.screen.ScreenAutoManager
 import okhttp3.*
 import org.json.JSONObject
@@ -111,12 +110,12 @@ class MyApplication : Application() {
         }
 
         var httpBuild = OkHttpClient.Builder()
-                .connectTimeout(HttpManager.connectTimeout, TimeUnit.MILLISECONDS)
-                .readTimeout(HttpManager.readTimeout, TimeUnit.MILLISECONDS)
-                .writeTimeout(HttpManager.writeTimeout, TimeUnit.MILLISECONDS)
+                .connectTimeout(HttpClient.connectTimeout, TimeUnit.MILLISECONDS)
+                .readTimeout(HttpClient.readTimeout, TimeUnit.MILLISECONDS)
+                .writeTimeout(HttpClient.writeTimeout, TimeUnit.MILLISECONDS)
 //                .addInterceptor(headInterceptor)
 
-        HttpManager.instance.init(baseUrl, httpBuild)
+        HttpClient.instance.init(baseUrl, httpBuild)
     }
 
 }

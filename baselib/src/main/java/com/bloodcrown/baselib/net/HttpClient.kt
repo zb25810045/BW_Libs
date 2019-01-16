@@ -17,8 +17,11 @@ import java.util.concurrent.TimeUnit
  * 作者 ： BloodCrown
  * 时间 ： 2018/12/9 下午9:42
  * 描述 ：
+ *
+ *  2019.1.16 ->  改名为 HttpClient ，感觉还是 HttpClient 这样命名更清晰
+ *
  */
-class HttpManager {
+class HttpClient {
 
     lateinit private var okHttpClient: OkHttpClient
     lateinit private var retrofit: Retrofit
@@ -30,7 +33,7 @@ class HttpManager {
         var readTimeout: Long = 10 * 1000
         var writeTimeout: Long = 10 * 1000
 
-        var instance: HttpManager = HttpManager()
+        var instance: HttpClient = HttpClient()
     }
 
     /**

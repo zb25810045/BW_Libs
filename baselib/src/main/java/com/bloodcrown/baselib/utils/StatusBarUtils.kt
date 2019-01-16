@@ -17,7 +17,6 @@ import android.view.WindowManager
  */
 class StatusBarUtils {
 
-
     companion object {
 
         /**
