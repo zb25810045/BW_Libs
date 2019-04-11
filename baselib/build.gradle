@@ -31,5 +31,8 @@ dependencies {
     implementation rootProject.ext.dependence.http3LoggingInterceptor
     implementation rootProject.ext.dependence.okhttp3
 
+    // andpermission 权限依赖
+    implementation rootProject.ext.dependence.and_permission
+
 }
 

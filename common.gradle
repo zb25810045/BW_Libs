@@ -44,6 +44,31 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets {
+
+        main{
+            jniLibs.srcDirs = ['libs']
+        }
+
+
+
+//        main {
+//            jniLibs.srcDirs = ['libs']
+//            if ("true".equals(FINANCE_IS_APPLICATION)) {
+//                manifest.srcFile 'src/main/diff/appmodule/AndroidManifest.xml'
+//                java.srcDirs = ['src/main/java', 'src/main/diff/appmodule/java']
+//                res.srcDirs = ['src/main/res', 'src/main/diff/appmodule/res']
+//                ssets.srcDirs = ['src/main/assets', 'src/main/diff/appmodule/assets']
+//            } else {
+//                manifest.srcFile 'src/main/diff/libmodule/AndroidManifest.xml'
+//                java.srcDirs = ['src/main/java', 'src/main/diff/libmodule/java']
+//                res.srcDirs = ['src/main/res', 'src/main/diff/libmodule/res']
+//                assets.srcDirs = ['src/main/assets', 'src/main/diff/libmodule/assets']
+//            }
+//        }
+    }
+
 }
 
 dependencies {

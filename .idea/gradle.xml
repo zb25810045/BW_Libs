@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/baselib" />
             <option value="$PROJECT_DIR$/components/baseComponents" />
             <option value="$PROJECT_DIR$/components/commonRepositroy" />
+            <option value="$PROJECT_DIR$/player" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

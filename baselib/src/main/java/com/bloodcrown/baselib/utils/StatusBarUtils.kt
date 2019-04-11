@@ -24,6 +24,7 @@ class StatusBarUtils {
          */
         fun setStatusBarColorByKITKAT(window: Window, context: Context, color: Int) {
 
+            // 4.4 时采用在 window 顶层容器中添加 view 遮盖系统状态栏的思路
             if (Build.VERSION.SDK_INT == Build.VERSION_CODES.KITKAT) {
                 window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
                 var systemContent = window.findViewById(android.R.id.content) as ViewGroup
@@ -35,6 +36,16 @@ class StatusBarUtils {
                 systemContent.getChildAt(0).setFitsSystemWindows(true);
                 systemContent.addView(statusBarView, 0, lp);
             }
+
+            // 5.0 以上使用系统提供的 API 即可，这里严谨判断的话需要取掉状态栏透明的标记
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
+                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
+                window.setStatusBarColor(color)
+            }
+
+
+
         }
 
         /**

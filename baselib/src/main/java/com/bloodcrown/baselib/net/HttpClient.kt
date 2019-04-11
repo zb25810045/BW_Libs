@@ -19,8 +19,8 @@ import java.util.concurrent.TimeUnit
  * 描述 ：
  *
  *  2019.1.16 ->  改名为 HttpClient ，感觉还是 HttpClient 这样命名更清晰
- *
- */
+ **/
+
 class HttpClient {
 
     lateinit private var okHttpClient: OkHttpClient
@@ -92,6 +92,15 @@ class HttpClient {
      */
     fun <S> createRetrofitService(service: Class<S>): S {
         return retrofit.create(service)
+    }
+
+
+    fun test() {
+
+        Observable.just(1, 2, 3, 4, 5, 6)
+
+
+
     }
 
 }

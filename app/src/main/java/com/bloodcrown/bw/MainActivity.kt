@@ -5,10 +5,10 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.bloodcrown.basecomponents.toast.ToastComponent
-import com.bloodcrown.baselib.utils.NetworkUtils
 import com.bloodcrown.bw.customeview.CustomeViewActivity
 import com.bloodcrown.bw.list.RecyclerViewActivity
 import com.bloodcrown.bw.net.NetActivity
+import com.bloodcrown.bw.permission.PermissionActivity
 import com.bloodcrown.bw.screenauto.ScreenAutoActivity
 import com.bloodcrown.bw.spannable.SpannableActivity
 import com.bloodcrown.bw.textview.TextViewActivity
@@ -85,9 +85,15 @@ class MainActivity : AppCompatActivity() {
         })
 
         // 自定义 webview
-         btn_screen.setOnClickListener({
+        btn_screen.setOnClickListener({
 
             var intent: Intent = Intent(this@MainActivity, ScreenAutoActivity::class.java)
+            this@MainActivity.startActivity(intent)
+        })
+
+        btn_permission.setOnClickListener({
+
+            var intent: Intent = Intent(this@MainActivity, PermissionActivity::class.java)
             this@MainActivity.startActivity(intent)
         })
 

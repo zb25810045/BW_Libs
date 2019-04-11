@@ -11,6 +11,6 @@ class WebViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_web_view)
 
-        view_myWebView.loadUrl("http://www.sina.com")
+        view_myWebView.loadUrl("http://www.baidu.com")
     }
 }

@@ -17,6 +17,8 @@ versions.retrofit = "2.4.0"
 versions.okhttp3 = "3.4.1"
 versions.gson = "2.4.0"
 
+versions.and_permission = "2.0.0-rc4"
+
 
 ext {
 
@@ -56,10 +58,10 @@ ext {
             'constraintLayout'       : "com.android.support.constraint:constraint-layout:$versions.constraintLayout",
 
             // module 基础配置
-            'junit'       : "junit:junit:$versions.junit",
-            'runner'       : "com.android.support.test:runner:$versions.runner",
-            'espresso'       : "com.android.support.test.espresso:espresso-core:$versions.espresso",
-            'multidex'       : "com.android.support:multidex:$versions.multidex",
+            'junit'                  : "junit:junit:$versions.junit",
+            'runner'                 : "com.android.support.test:runner:$versions.runner",
+            'espresso'               : "com.android.support.test.espresso:espresso-core:$versions.espresso",
+            'multidex'               : "com.android.support:multidex:$versions.multidex",
 
             // kotlin
             'kotlinStdlibJdk8'       : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$versions.kotlin",
@@ -78,6 +80,9 @@ ext {
             // okhttp3
             'okhttp3'                : "com.squareup.okhttp3:okhttp:$versions.okhttp3",
             'http3LoggingInterceptor': "com.squareup.okhttp3:logging-interceptor:$versions.okhttp3",
+
+            // andpermission
+            'and_permission'          : "com.yanzhenjie:permission:$versions.and_permission",
 
     ]
 

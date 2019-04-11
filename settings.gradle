@@ -1,4 +1,4 @@
-include ':app', ':baseComponents', ':baselib', ':commonRepositroy'
+include ':app', ':baseComponents', ':baselib', ':commonRepositroy', ':player'
 
 project(':baseComponents').projectDir = new File( 'components/baseComponents' )
 project(':commonRepositroy').projectDir = new File( 'components/commonRepositroy' )
