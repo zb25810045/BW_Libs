@@ -32,14 +32,14 @@ class TextViewActivity : AppCompatActivity() {
             }
         }
 
-        btn01.setOnClickListener({
+        btn01.setOnClickListener {
             layoutAnimator.start()
-        })
+        }
 
         layoutClickAnimator = LayoutClickAnimator(view_02, 300)
-        view_02.setOnClickListener({
+        view_02.setOnClickListener {
             Toast.makeText(application, "AAA", Toast.LENGTH_SHORT).show()
-        })
+        }
     }
 
 }

@@ -26,7 +26,7 @@ class DiffAdapter : BaseAdapter<Any>() {
         return R.layout.item_book
     }
 
-    override fun onBindViewHolder(holder: BaseViewHolder?, position: Int) {
+    override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
 
         Log.d("AA", "position:" + position)
         if (data.get(position) is Book) {
@@ -41,7 +41,7 @@ class DiffAdapter : BaseAdapter<Any>() {
         }
     }
 
-    override fun onBindViewHolder(holder: BaseViewHolder?, position: Int, payloads: MutableList<Any>?) {
+    override fun onBindViewHolder(holder: BaseViewHolder, position: Int, payloads: MutableList<Any>) {
         onBindViewHolder(holder, position)
     }
 

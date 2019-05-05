@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-
 apply from: rootProject.file('common.gradle')
 //apply from: rootProject.file('releaseinfo.gradle')
 
@@ -30,9 +29,7 @@ android {
     buildTypes {
 
         debug {
-
             buildConfigField('String', 'baseUrl', '"baseUrl_debug"')
-
         }
         release {
 //            minifyEnabled false

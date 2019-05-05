@@ -35,17 +35,17 @@ class MyApplication : Application() {
 
             override fun onActivityCreated(activity: Activity?, savedInstanceState: Bundle?) {
                 ScreenAutoManager.instance.onActivityCreated(activity)
-                Log.d("AA", "onActivityCreated")
+                Log.d("AA", "onActivityCreated1")
             }
 
             override fun onActivityResumed(activity: Activity?) {
                 ScreenAutoManager.instance.onActivityResumed(activity)
-                Log.d("AA", "onActivityResumed")
+                Log.d("AA", "onActivityResumed1")
             }
 
             override fun onActivityStarted(activity: Activity?) {
                 ScreenAutoManager.instance.onActivityStarted(activity)
-                Log.d("AA", "onActivityStarted")
+                Log.d("AA", "onActivityStarted1")
             }
 
             override fun onActivityPaused(activity: Activity?) {
@@ -53,15 +53,15 @@ class MyApplication : Application() {
             }
 
             override fun onActivityDestroyed(activity: Activity?) {
-                Log.d("AA", "onActivityDestroyed")
+                Log.d("AA", "onActivityDestroyed1")
             }
 
             override fun onActivitySaveInstanceState(activity: Activity?, outState: Bundle?) {
-                Log.d("AA", "onActivitySaveInstanceState")
+                Log.d("AA", "onActivitySaveInstanceState1")
             }
 
             override fun onActivityStopped(activity: Activity?) {
-                Log.d("AA", "onActivityStopped")
+                Log.d("AA", "onActivityStopped1")
             }
         })
 

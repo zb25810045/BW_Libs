@@ -26,7 +26,7 @@ class StandarAdapter : BaseAdapter<Any>() {
         return R.layout.item_book
     }
 
-    override fun onBindViewHolder(holder: BaseViewHolder?, position: Int) {
+    override fun onBindViewHolder(holder: BaseViewHolder, position: Int) {
 
         if (holder?.dataBinding is ItemBookBinding) {
             holder?.dataBinding?.setVariable(BR.book, data.get(position) as Book)

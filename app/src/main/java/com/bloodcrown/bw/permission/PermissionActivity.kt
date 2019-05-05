@@ -12,14 +12,13 @@ import com.bloodcrown.baselib.utils.intent.IntentUtils
 import com.bloodcrown.bw.R
 import kotlinx.android.synthetic.main.activity_permission.*
 
-
 class PermissionActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_permission)
 
-        btn_permission.setOnClickListener({
+        btn_permission.setOnClickListener {
 
             PermissionManage
                     .with(this)
@@ -30,7 +29,7 @@ class PermissionActivity : AppCompatActivity() {
                     .onDenial { Toast.makeText(this@PermissionActivity, "用户拒绝", Toast.LENGTH_SHORT).show() }
                     .onDontShow { IntentUtils.startSettingActivityForResult(this, 200) }
                     .run()
-        })
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

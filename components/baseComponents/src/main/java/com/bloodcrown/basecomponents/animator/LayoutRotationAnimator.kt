@@ -70,10 +70,10 @@ class LayoutRotationAnimator(view: View, time: Long = 300) {
     private fun changeState() {
         if (currentState == STATE_A) {
             currentState = STATE_B
-            stateChangeListener?.showB()
+            stateChangeListener.showB()
         } else {
             currentState = STATE_A
-            stateChangeListener?.showA()
+            stateChangeListener.showA()
         }
     }
 

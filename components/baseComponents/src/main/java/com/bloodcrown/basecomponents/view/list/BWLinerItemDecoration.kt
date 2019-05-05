@@ -21,7 +21,7 @@ class BWLinerItemDecoration(var decorationHeight: Float = 0.toFloat(), var decor
         if (decorationColor != 0) mPaint.color = decorationColor else mPaint.color = Color.RED
     }
 
-    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State?) {
+    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
         super.getItemOffsets(outRect, view, parent, state)
 
         //        //第一个ItemView不需要在上面绘制分割线
@@ -32,7 +32,7 @@ class BWLinerItemDecoration(var decorationHeight: Float = 0.toFloat(), var decor
         }
     }
 
-    override fun onDraw(c: Canvas, parent: RecyclerView, state: RecyclerView.State?) {
+    override fun onDrawOver(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
         super.onDraw(c, parent, state)
 
         val childCount = parent.childCount

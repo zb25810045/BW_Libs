@@ -6,18 +6,20 @@ import android.support.v7.app.AppCompatActivity
 import android.text.TextPaint
 import android.text.style.ClickableSpan
 import android.view.View
+import com.bloodcrown.basecomponents.spannbale.SpanUtils
 import com.bloodcrown.basecomponents.toast.ToastComponent
 import com.bloodcrown.basecomponents.utils.UnitUtils
-import com.bloodcrown.basecomponents.spannbale.SpanUtils
 import com.bloodcrown.bw.R
+import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.activity_spannable.*
 
 class SpannableActivity : AppCompatActivity() {
 
+    var disposable: Disposable? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spannable)
-
 
         // 前景色
         SpanUtils
@@ -98,13 +100,11 @@ class SpannableActivity : AppCompatActivity() {
                 .image(drawable, text.indexOf("k"), text.indexOf("k") + 4)
                 .show()
 
-
         // 可点击区域
         SpanUtils
                 .with(tx10)
                 .clickable(tx10, MyClickSpan(), tx10.text.indexOf("-") + 1, tx10.text.length)
                 .show()
-
 
         // 超链接
         SpanUtils
@@ -126,4 +126,11 @@ class SpannableActivity : AppCompatActivity() {
         }
     }
 
+    override fun onDestroy() {
+        disposable?.dispose()
+        super.onDestroy()
+    }
+
 }
+
+

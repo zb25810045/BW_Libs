@@ -82,7 +82,17 @@ dependencies {
 
     implementation rootProject.ext.dependence.kotlinStdlibJdk8
     implementation rootProject.ext.dependence.kotlinReflect
-    kapt rootProject.ext.dependence.databinding
+//    kapt rootProject.ext.dependence.databinding
+
+    implementation rootProject.ext.dependence.runtime
+    implementation rootProject.ext.dependence.extensions
+    implementation  rootProject.ext.dependence.compiler
+
+
+
+//    compile "android.arch.lifecycle:runtime:1.1.0"
+//    compile "android.arch.lifecycle:extensions:1.1.0"
+//    annotationProcessor "android.arch.lifecycle:compiler:1.1.0"
 
 }
 repositories {

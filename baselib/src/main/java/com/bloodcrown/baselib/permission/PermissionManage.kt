@@ -1,10 +1,9 @@
 package com.bloodcrown.baselib.permission
 
-import android.app.Activity
-import android.app.Application
+import android.arch.lifecycle.Lifecycle
+import android.arch.lifecycle.OnLifecycleEvent
 import android.content.Context
 import android.content.pm.PackageManager
-import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
 import com.bloodcrown.baselib.permission.build.PermissionBuild
 
@@ -34,12 +33,16 @@ class PermissionManage {
 
         @JvmStatic
         fun isHavePermissions(context: Context, permissions: List<String>): Boolean {
-
             for (it in permissions) {
                 if (!(PackageManager.PERMISSION_GRANTED == ContextCompat.checkSelfPermission(context, it))) return false
             }
             return true
         }
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
+    fun aaa() {
+
     }
 
 }
