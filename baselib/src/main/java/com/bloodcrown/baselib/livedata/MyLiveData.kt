@@ -54,7 +54,7 @@ class MyLiveData<T> : AbsMyLiveData<T>() {
             @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
             fun destroy() {
                 if (!disposable.isDisposed) disposable.dispose()
-                disposableList.remove(tag)
+                if (tag != null) disposableList.remove(tag)
             }
         })
     }
