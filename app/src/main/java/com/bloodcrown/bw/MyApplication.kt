@@ -1,9 +1,8 @@
 package com.bloodcrown.bw
 
-import android.app.Activity
 import android.app.Application
-import android.os.Bundle
 import android.util.Log
+import com.bloodcrown.basecomponents.applicaton.ApplicationManage
 import com.bloodcrown.basecomponents.toast.ToastComponent
 import com.bloodcrown.baselib.net.HttpClient
 import com.bloodcrown.baselib.screen.ScreenAutoManager
@@ -22,48 +21,41 @@ class MyApplication : Application() {
     override fun onCreate() {
         super.onCreate()
 
+        ScreenAutoManager.instance.init(this, 1080.0f, ScreenAutoManager.BASE_LINE_WIDTH)
+
+        ApplicationManage.init(this)
+        ApplicationManage.instance.addObserver { lifecycleMessage ->
+            when (lifecycleMessage.type) {
+                ApplicationManage.MessageType.MESSAGE_ACTIVITY_CREATE -> {
+                    if (lifecycleMessage.activity != null) ScreenAutoManager.instance.onActivityCreated(lifecycleMessage.activity)
+                    Log.d("AA", "MESSAGE_ACTIVITY_CREATE")
+                }
+                ApplicationManage.MessageType.MESSAGE_ACTIVITY_START -> {
+                    if (lifecycleMessage.activity != null) ScreenAutoManager.instance.onActivityStarted(lifecycleMessage.activity)
+                    Log.d("AA", "MESSAGE_ACTIVITY_START")
+                }
+                ApplicationManage.MessageType.MESSAGE_ACTIVITY_RESUME -> {
+                    if (lifecycleMessage.activity != null) ScreenAutoManager.instance.onActivityResumed(lifecycleMessage.activity)
+                    Log.d("AA", "MESSAGE_ACTIVITY_RESUME")
+                }
+                ApplicationManage.MessageType.MESSAGE_ACTIVITY_PAUSE -> Log.d("AA", "MESSAGE_ACTIVITY_PAUSE")
+                ApplicationManage.MessageType.MESSAGE_ACTIVITY_STOP -> Log.d("AA", "MESSAGE_ACTIVITY_STOP")
+                ApplicationManage.MessageType.MESSAGE_ACTIVITY_SAVEINSTANCESTATE -> Log.d("AA", "MESSAGE_ACTIVITY_SAVEINSTANCESTATE")
+                ApplicationManage.MessageType.MESSAGE_ACTIVITY_DESTROYED -> Log.d("AA", "MESSAGE_ACTIVITY_DESTROYED")
+
+                ApplicationManage.MessageType.MESSAGE_APP_START -> Log.d("AA", "MESSAGE_APP_START")
+                ApplicationManage.MessageType.MESSAGE_APP_EXIT -> Log.d("AA", "MESSAGE_APP_EXIT")
+                ApplicationManage.MessageType.MESSAGE_APP_FORNT -> Log.d("AA", "MESSAGE_APP_FORNT")
+                ApplicationManage.MessageType.MESSAGE_APP_BACKGROUD -> Log.d("AA", "MESSAGE_APP_BACKGROUD")
+            }
+        }
+
         // 初始化 toast 组件
         ToastComponent.init(this)
 //        StallBuster.getInstance().init(this)
 
         // 初始化网络配置
         initHttp()
-
-        ScreenAutoManager.instance.init(this, 1080.0f, ScreenAutoManager.BASE_LINE_WIDTH)
-
-        this.registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
-
-            override fun onActivityCreated(activity: Activity?, savedInstanceState: Bundle?) {
-                ScreenAutoManager.instance.onActivityCreated(activity)
-                Log.d("AA", "onActivityCreated1")
-            }
-
-            override fun onActivityResumed(activity: Activity?) {
-                ScreenAutoManager.instance.onActivityResumed(activity)
-                Log.d("AA", "onActivityResumed1")
-            }
-
-            override fun onActivityStarted(activity: Activity?) {
-                ScreenAutoManager.instance.onActivityStarted(activity)
-                Log.d("AA", "onActivityStarted1")
-            }
-
-            override fun onActivityPaused(activity: Activity?) {
-                Log.d("AA", "AA")
-            }
-
-            override fun onActivityDestroyed(activity: Activity?) {
-                Log.d("AA", "onActivityDestroyed1")
-            }
-
-            override fun onActivitySaveInstanceState(activity: Activity?, outState: Bundle?) {
-                Log.d("AA", "onActivitySaveInstanceState1")
-            }
-
-            override fun onActivityStopped(activity: Activity?) {
-                Log.d("AA", "onActivityStopped1")
-            }
-        })
 
     }
 

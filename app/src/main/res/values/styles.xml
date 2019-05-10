@@ -6,6 +6,12 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="splaseTheme" parent="fullScreenTheme">
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:scaleType">centerCrop</item>
     </style>
 
     <style name="AppTheme.NoActionBar">

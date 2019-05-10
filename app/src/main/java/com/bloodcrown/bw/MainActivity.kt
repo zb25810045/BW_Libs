@@ -1,11 +1,11 @@
 package com.bloodcrown.bw
 
-import android.arch.lifecycle.Observer
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.bloodcrown.basecomponents.toast.ToastComponent
+import com.bloodcrown.bw.application.ApplicationActivity
 import com.bloodcrown.bw.customeview.CustomeViewActivity
 import com.bloodcrown.bw.list.RecyclerViewActivity
 import com.bloodcrown.bw.net.NetActivity
@@ -45,7 +45,6 @@ class MainActivity : AppCompatActivity() {
         btn_spannable.setOnClickListener {
             var intent: Intent = Intent(this@MainActivity, SpannableActivity::class.java)
             this@MainActivity.startActivity(intent)
-
         }
 
         // textview 效果
@@ -90,5 +89,15 @@ class MainActivity : AppCompatActivity() {
             this@MainActivity.startActivity(intent)
         }
 
+        // application 组件测试
+        btn_application.setOnClickListener {
+            var intent: Intent = Intent(this@MainActivity, ApplicationActivity::class.java)
+            this@MainActivity.startActivity(intent)
+        }
+
+    }
+
+    override fun onBackPressed() {
+//        super.onBackPressed()
     }
 }

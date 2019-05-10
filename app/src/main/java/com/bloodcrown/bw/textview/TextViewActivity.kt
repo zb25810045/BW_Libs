@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import com.bloodcrown.basecomponents.animator.LayoutClickAnimator
 import com.bloodcrown.basecomponents.animator.LayoutRotationAnimator
+import com.bloodcrown.basecomponents.applicaton.ApplicationManage
 import com.bloodcrown.bw.R
 import kotlinx.android.synthetic.main.activity_text_view.*
 

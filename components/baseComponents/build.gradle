@@ -1,5 +1,7 @@
 apply plugin: 'com.android.library'
-apply from:rootProject.file('common.gradle')
+apply from: rootProject.file('common.gradle')
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
 
@@ -21,4 +23,7 @@ dependencies {
     implementation rootProject.ext.dependence.appcompatv7
     implementation rootProject.ext.dependence.recyclerview
     implementation rootProject.ext.dependence.constraintLayout
+
+    implementation project(':baselib')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 }

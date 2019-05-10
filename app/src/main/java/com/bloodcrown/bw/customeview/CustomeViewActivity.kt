@@ -3,9 +3,9 @@ package com.bloodcrown.bw.customeview
 import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.bloodcrown.bw.customeview.pieview.PieViewActivity
 import com.bloodcrown.bw.R
 import com.bloodcrown.bw.customeview.flexbox.FlexLayoutActivity
+import com.bloodcrown.bw.customeview.pieview.PieViewActivity
 import com.bloodcrown.bw.customeview.ratingbar.RatingBarActivity
 import com.bloodcrown.bw.customeview.taiji.TaijiActivity
 import com.bloodcrown.bw.customeview.textview.CustomeTextviewActivity

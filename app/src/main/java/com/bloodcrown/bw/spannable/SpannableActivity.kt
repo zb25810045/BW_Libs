@@ -15,8 +15,6 @@ import kotlinx.android.synthetic.main.activity_spannable.*
 
 class SpannableActivity : AppCompatActivity() {
 
-    var disposable: Disposable? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spannable)
@@ -127,7 +125,6 @@ class SpannableActivity : AppCompatActivity() {
     }
 
     override fun onDestroy() {
-        disposable?.dispose()
         super.onDestroy()
     }
 
